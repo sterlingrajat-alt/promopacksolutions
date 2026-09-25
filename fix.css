@@ -1,3 +1,43 @@
 .elementor-invisible {
   visibility: visible !important;
 }
+
+.pps-call {
+  position: fixed;
+  left: 1%;
+  bottom: 35%;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pps-call a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+
+.pps-call i {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #a4c43b, #389c44);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.pps-call span {
+  background: rgba(164, 196, 59, 0.97);
+  color: #fff;
+  font-size: 12px;
+  line-height: 1;
+  padding: 8px 10px;
+  border-radius: 4px;
+  font-family: Arial, sans-serif;
+}
