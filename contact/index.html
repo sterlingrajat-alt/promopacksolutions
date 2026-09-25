@@ -707,6 +707,19 @@ var wpforms_settings = {"val_required":"This field is required.","val_email":"Pl
 /* ]]> */
 </script>
 <div class="pps-call"><a href="tel:+97148804707" aria-label="Call us today!"><i class="fas fa-phone" aria-hidden="true"></i><span>Call us today!</span></a></div>
+<script>
+document.addEventListener("submit", function (e) {
+  var form = e.target;
+  if (!form || !form.classList || !form.classList.contains("wpforms-form")) return;
+  e.preventDefault();
+  e.stopPropagation();
+  var lines = [];
+  new FormData(form).forEach(function (v, k) {
+    if (String(v).trim()) lines.push(k + ": " + v);
+  });
+  window.location.href = "mailto:info@promopacksolutions.net?subject=" + encodeURIComponent("Website quote request") + "&body=" + encodeURIComponent(lines.join("\n"));
+}, true);
+</script>
 </body>
 </html>
 
